@@ -4,6 +4,7 @@ This is a small, lightweight Alpine docker container that contains the bare mini
 Packages:
 - `openssh` - SSH server
 - `openjdk17-jre-headless` - Java 17
+- `git` - Git
 
 Credentials:
 - `jenkins` - jenkins
