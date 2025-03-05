@@ -3,4 +3,4 @@ RUN apk add --no-cache openssh openjdk17-jre-headless
 RUN addgroup --gid 1000 "jenkins" && adduser --uid 1000 --ingroup "jenkins" --home "/home/jenkins" --shell "/bin/sh" --disabled-password --gecos "" "jenkins"
 RUN echo 'jenkins:jenkins' | chpasswd
 RUN ssh-keygen -A
-CMD [ "/usr/sbin/sshd" "-D" ]
+CMD /usr/sbin/sshd -D
