@@ -2,7 +2,7 @@
 This is a small, lightweight Alpine docker container that contains the bare minimum to run a Jenkins runner via Docker and SSH.
 
 Packages:
-- `dropbear` - SSH server
+- `openssh` - SSH server
 - `openjdk17-jre-headless` - Java 17
 
 Credentials:
