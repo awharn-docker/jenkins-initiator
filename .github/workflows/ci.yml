@@ -70,7 +70,7 @@ jobs:
           overwrite: true
 
   build-and-deploy-arm:
-    runs-on: fastarm
+    runs-on: ubuntu-22.04-arm
     strategy:
       fail-fast: false
     steps:
@@ -101,7 +101,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.PAT }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           logout: false
 
       - name: Build & Push
@@ -130,7 +130,7 @@ jobs:
           overwrite: true
 
   merge:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-arm
     strategy:
       fail-fast: false
     needs: [build-and-deploy-x64, build-and-deploy-arm]
